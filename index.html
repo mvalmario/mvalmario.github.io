@@ -36,6 +36,13 @@
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       background-color: var(--bg);
+      /* Applied Topographic Lines over the background color */
+      background-image:
+        linear-gradient(rgba(0,20,8,0.85), rgba(0,20,8,0.85)),
+        url('vecteezy_topography-map-background-vector_201575.svg');
+      background-repeat: repeat;
+      background-size: cover;
+      background-attachment: fixed; /* Keeps isolines steady while scrolling */
       color: var(--text);
       line-height: 1.6;
       padding: 0 1.5rem;
@@ -227,9 +234,6 @@
       <h1>Geographic Information Systems Professional</h1>
       <p>I build clean, responsive, and performant web applications using modern tools like JavaScript, Node.js, and React.</p>
       <a href="#contact" class="btn">Get in Touch</a>
-      <p>
-        <video src="https://github.com/mvalmario/tract-and-parcel-lookup/blob/main/TractParcelLookupVid.webm" width="320" height="240" controls></video>
-      </p>
 
     </section>
 
