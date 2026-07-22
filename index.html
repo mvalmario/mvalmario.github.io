@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Marcelo Almario — Portfolio</title>
-  
+
   <!-- Open Graph Meta Tags (for link previews on LinkedIn, Twitter, etc.) -->
   <meta property="og:title" content="Marcelo Almario — Developer Portfolio">
   <meta property="og:description" content="Software Engineer building modern web applications.">
@@ -14,8 +14,9 @@
     /* --- CSS Variables & Theme --- */
     :root {
       --bg: #001408;
-      --card-bg: #a4778b;
+      --card-bg: #c0b298;
       --text: #f8fafc;
+      --text-dark: #08080a;
       --text-muted: #94a3b8;
       --accent: #c0b298;
       --accent-hover: #a4778b;
@@ -142,11 +143,12 @@
 
     .project-card h3 {
       font-size: 1.25rem;
+      color: var(--text-dark);
       margin-bottom: 0.5rem;
     }
 
     .project-card p {
-      color: var(--text-muted);
+      color: var(--text-dark);
       font-size: 0.95rem;
       margin-bottom: 1rem;
     }
@@ -168,6 +170,7 @@
 
     .project-links {
       display: flex;
+      color: var(--text-dark)
       gap: 1rem;
       font-size: 0.9rem;
       font-weight: 500;
@@ -182,6 +185,7 @@
 
     .skill-pill {
       background-color: var(--card-bg);
+      color: var(--text-dark);
       border: 1px solid #334155;
       padding: 0.5rem 1rem;
       border-radius: 20px;
@@ -210,7 +214,7 @@
   <div class="container">
     <!-- Navigation -->
     <header>
-      <div class="logo">Your Name</div>
+      <div class="logo">Marcelo Almario</div>
       <nav>
         <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
@@ -220,7 +224,7 @@
 
     <!-- Hero -->
     <section class="hero" style="border: none;">
-      <h1>Full-Stack Software Engineer</h1>
+      <h1>Geographic Information Systems Professional</h1>
       <p>I build clean, responsive, and performant web applications using modern tools like JavaScript, Node.js, and React.</p>
       <a href="#contact" class="btn">Get in Touch</a>
     </section>
@@ -229,7 +233,7 @@
     <section id="projects">
       <h2>Featured Projects</h2>
       <div class="projects-grid">
-        
+
         <!-- Project 1 -->
         <div class="project-card">
           <div>
@@ -287,15 +291,15 @@
         Feel free to reach out for opportunities, collaborations, or just a quick chat!
       </p>
       <p>
-        Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
-        GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a><br>
+        Email: <a href="mailto:marcelo.almario@gmail.com">marcelo.almario@gmail.com</a><br>
+        GitHub: <a href="https://github.com/mvalmario" target="_blank">github.com/mvalmario</a><br>
         LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
       </p>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>© 2026 Your Name. Built with standard HTML & CSS, hosted on GitHub Pages.</p>
+      <p>© 2026 Marcelo Almario. Built with standard HTML & CSS, hosted on GitHub Pages.</p>
     </footer>
   </div>
 
