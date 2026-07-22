@@ -1,5 +1,303 @@
-<h1>
-  <strong> Hello World </strong>
-</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name — Portfolio</title>
+  
+  <!-- Open Graph Meta Tags (for link previews on LinkedIn, Twitter, etc.) -->
+  <meta property="og:title" content="Your Name — Developer Portfolio">
+  <meta property="og:description" content="Software Engineer building modern web applications.">
+  <meta property="og:type" content="website">
 
-<h2>Word</h2>
+  <style>
+    /* --- CSS Variables & Theme --- */
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #0284c7;
+      --max-width: 900px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    /* --- Header & Navigation --- */
+    header {
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: var(--text);
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--text);
+    }
+
+    /* --- Hero Section --- */
+    .hero {
+      padding: 5rem 0 3rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: var(--accent);
+      color: var(--bg);
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: opacity 0.2s ease;
+    }
+
+    .btn:hover {
+      color: var(--bg);
+      opacity: 0.9;
+    }
+
+    /* --- Section Layout --- */
+    section {
+      padding: 4rem 0;
+      border-top: 1px solid #334155;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    /* --- Projects Grid --- */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .tag {
+      background: #334155;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* --- Skills List --- */
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .skill-pill {
+      background-color: var(--card-bg);
+      border: 1px solid #334155;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* --- Footer --- */
+    footer {
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      border-top: 1px solid #334155;
+    }
+
+    /* Responsive adjustment */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2.25rem; }
+      header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+      nav a { margin-left: 0; margin-right: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Navigation -->
+    <header>
+      <div class="logo">Your Name</div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" style="border: none;">
+      <h1>Full-Stack Software Engineer</h1>
+      <p>I build clean, responsive, and performant web applications using modern tools like JavaScript, Node.js, and React.</p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="projects-grid">
+        
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div>
+            <h3>Project Title One</h3>
+            <p>A concise explanation of the problem solved, tech stack used, and key feature of the application.</p>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">REST API</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank">Live Demo →</a>
+            <a href="#" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div>
+            <h3>Project Title Two</h3>
+            <p>A brief summary of what this app does and what you built from scratch.</p>
+            <div class="tags">
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="#" target="_blank">Live Demo →</a>
+            <a href="#" target="_blank">GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills & Technologies</h2>
+      <div class="skills-list">
+        <span class="skill-pill">JavaScript (ES6+)</span>
+        <span class="skill-pill">HTML5 & CSS3</span>
+        <span class="skill-pill">React</span>
+        <span class="skill-pill">Node.js</span>
+        <span class="skill-pill">Git / GitHub</span>
+        <span class="skill-pill">RESTful APIs</span>
+        <span class="skill-pill">SQL</span>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Let's Connect</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.5rem;">
+        Feel free to reach out for opportunities, collaborations, or just a quick chat!
+      </p>
+      <p>
+        Email: <a href="mailto:your.email@example.com">your.email@example.com</a><br>
+        GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a><br>
+        LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+      </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2026 Your Name. Built with standard HTML & CSS, hosted on GitHub Pages.</p>
+    </footer>
+  </div>
+
+</body>
+</html>
